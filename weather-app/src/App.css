@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap");
+*{ margin:0;padding:0; }
+html, body {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family: 'Noto Sans', sans-serif;
+}
+.wrap {
+  position:relative;
+  width:100%;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  text-align:center;
+}
+.content_box {
+  max-width: 440px;
+  width: 100%;
+}
+.img_background {
+  position:absolute;
+  left:0;top:50%;
+  transform: translateY(-50%);
+  width:100%;
+  height:100vh;
+  z-index:-1;
+}
+.is_Clouds{
+  background:url('./img/Clouds.jpg') no-repeat;
+  background-size:cover; 
+}
+.is_Rain {
+  background: url('./img/Rain.jpg') no-repeat;
+  background-size: cover;
+}
+.is_Squall {
+  background: url('img/Squall.jpg') no-repeat;
+  background-size: cover;
+}
+.is_Clear {
+  background: url('./img/Clear.jpg') no-repeat;
+  background-size: cover;
+}
+.is_Snow {
+  background: url('./img/Snow.jpg') no-repeat;
+  background-size: cover;
+}
+.is_Dust {
+  background: url('./img/Dust.jpg') no-repeat;
+  background-size: cover;
+}
+.is_Fog {
+  background: url('./img/Fog.jpg') no-repeat;
+  background-size: cover;
+}
+.ic_spinner {
+  position:absolute;
+  transform: translate(-50%,-50%);
+}
+.current_city {
+  -webkit-text-stroke: 1px #555;
+  text-stroke: 1px #555;
+}
+.current_city {
+  font-size:1.7em;
+  color:#eee;
+  font-weight:bold;
+  text-align:center;
+}
+.current_city {
+  color:rgb(107, 185, 230);
+}
+.text_wrap {
+  display:inline-block;
+  max-width:440px;
+  width:100%;
+  margin-top:40px;
+  border-radius:20px;
+  padding:20px 0;
+  background-color:#f3dcce;
+  box-sizing: border-box;
+}
+.text_wrap > span {
+  margin-top: 16px;
+  display: block;
+  box-sizing: border-box;
+}
+.text_wrap>span:nth-of-type(1) {
+  margin-top:0;
+}
+.text_location {
+  font-size:16px;
+  color:#555;
+  font-weight:700;
+}
+.text_temp {
+  font-size:17px;
+  color:#222;
+  font-weight:600;
+}
+.text_desc {
+  font-size:15px;
+  color:#555;
+  font-weight:500;
+}
+.btn_group {
+  margin-top:35px;
+}
+button {
+  cursor:pointer;
+  display:inline-block;
+  vertical-align:top;
+  background-color:#fc0;
+  color:#222;
+  font-weight:bold;
+  font-size:13px;
+  height:35px;
+  width:80px;
+}
+button:not(:nth-of-type(1)){
+  margin-left:10px;
+}
+button.is_active {
+  background-color:#2d2d2d;
+  color:#eee;
+}

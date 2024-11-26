@@ -1,0 +1,106 @@
+
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 80px;
+  box-sizing: border-box;
+  background: #faf4f4;
+  z-index: 30;
+
+  .util_area{
+    width: 100%; 
+    padding: 10px 0;
+    text-align: right;
+    box-sizing: border-box;
+  }
+
+  .logo{
+    display: inline-block;
+    width: 61px;
+    height: 40px;
+    background: url(../../../img/logo.svg) no-repeat;
+    background-size: 100%;
+
+    &_area{
+      width: 100%; 
+      padding: 10px 0;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  }
+
+  .nav_bar{
+    position: relative; 
+    display: flex; 
+    justify-content: center;
+    width: 100%; 
+    padding: 10px 0 5px ;
+    box-sizing: border-box;
+
+    .list{
+      &_menu{
+        width: 550px; 
+        display: flex; 
+        justify-content: space-between;
+      }
+
+      &_item{
+        width:auto;
+        cursor:pointer;
+      }
+
+      &_link{
+        position:relative; 
+        font-weight:bold;
+        padding:5px 10px;
+        
+        &::before{
+          position:absolute;
+          bottom:0;
+          left:0;
+          width:0px;
+          height:2px;
+          background-color:rgb(245, 130, 22);
+          transition: 0.3s;
+          content: '';
+        }
+
+        &:hover{
+          color:rgb(245, 130, 22);
+
+          &::before{
+            width: 100%;
+          }
+        }        
+      }
+    }
+  }
+
+  .search{
+    &_box{
+      position: absolute;
+      right:0;
+      top: 10px;
+
+      .input_search{
+        height: 22px;
+        padding-left: 20px; 
+        border: 0; 
+        border-bottom: 2px solid #000; 
+        background-color: transparent; 
+        line-height: 22px;
+        outline:none;
+      }
+
+      .ic_search{
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+    }
+  }
+}
+
+

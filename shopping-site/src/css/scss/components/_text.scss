@@ -1,0 +1,28 @@
+.text{
+  &_login {
+    transition: 0.3s;
+    font-weight: bold;
+
+    &:hover{
+      color: rgb(245, 130, 22);
+    }
+  }
+
+  &_error{
+    margin-top: 4px;
+    line-height: 20px;
+    color: red;
+    font-size: 12px;
+  }
+
+  &_guide{
+    text-align: center;
+    line-height: 28px;
+    color: #555;
+    font-weight: bold;
+
+    &:first-child{
+      margin-top: 100px;
+    }
+  }
+}
