@@ -74,7 +74,7 @@ export default class AppClass extends Component {
   render(){
     return(
       <div className="wrap">
-        <h1>"가위바위보"</h1>
+        <h1>"가위바위보 게임"</h1>
         <div className='game_board'>
           <BoxClass user="You" item={this.userSelected} result={this.userResult} />
           <BoxClass user="Computer" item={this.ob.computerSelected} result={this.computerResult} />

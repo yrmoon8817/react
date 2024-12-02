@@ -79,7 +79,7 @@ function App() {
   return (
 
     <div className="wrap">
-      <h1>"가위바위보"</h1>
+      <h1>"가위바위보 게임"</h1>
       <div className='test_box'>
         <span className='test_desc'>{count}</span>
         <span className='test_desc'>{reactCount}</span>
