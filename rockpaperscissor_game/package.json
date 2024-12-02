@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -23,7 +25,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": ".",
+  "homepage": "https://yrmoon8817.github.io/react/rockpaperscissor_game",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -38,9 +40,9 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.2.0"
   },
-   "rules": {
+  "rules": {
     "jsx-a11y/alt-text": "off"
   }
 }
