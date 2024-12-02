@@ -29,7 +29,7 @@ export default class BoxClass extends Component {
     return (
       <div key={this.props.result + this.state.reactCount++} className={`game_box is_${this.result}`}>
         <strong className="game_user">{this.props.user}</strong>
-        <img src={this.props.item && this.props.item.img} alt="이미지 설명"/>
+        <img src={this.props.item && this.props.item.img} alt="이미지"/>
         <strong className="game_result" animation={this.result}>{this.result}</strong>
       </div>
     )
