@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useState } from 'react';
+import {useState } from 'react';
 import Box from './components/Box'
 import Rock from "./images/rock.svg"
 import Scissors from "./images/scissors.svg"
@@ -32,11 +32,11 @@ const choice={
 
 function App() {
   let count = 0;
-  const [userSelect, setUserSelect] = useState(null);
-  const [computerSelect, setComputerSelect] = useState(null);
+  const [userSelect, setUserSelect] = useState(choice.rock);
+  const [computerSelect, setComputerSelect] = useState(choice.rock);
   const [result, setResult] = useState("");
   const [reactCount, setReactCount] = useState(0);
-  let userResult = "", computerResult = ""
+  let userResult = "", computerResult = "";
   const play = (userChoice) => {
     count += 1;
     setUserSelect(choice[userChoice]);
@@ -73,8 +73,6 @@ function App() {
     let final = itemArray[randomItem]
     return choice[final]
   }
-
-
 
   return (
 
