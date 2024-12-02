@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://yrmoon8817.github.io/react/weather-app",
+  "homepage": "https://yrmoon8817.github.io/react/weather-app/build",
   "rules": {
     "jsx-a11y/alt-text": "off"
   },

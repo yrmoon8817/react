@@ -25,7 +25,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://yrmoon8817.github.io/react/rockpaperscissor_game",
+  "homepage": "https://yrmoon8817.github.io/react/rockpaperscissor_game/build",
   "browserslist": {
     "production": [
       ">0.2%",
