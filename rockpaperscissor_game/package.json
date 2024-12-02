@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "main -d rockpaperscissor_game/build"
+    "deploy": "npm run build && cp -R build/* ../rockpaperscissor_game/build/"
   },
   "eslintConfig": {
     "extends": [
