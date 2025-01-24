@@ -1,0 +1,68 @@
+.page-list {
+  box-sizing: border-box;
+  max-height: 100vh;
+}
+
+.page-list h1 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.page-list .inner {
+  width: 600px;
+}
+
+.page-list .inner .list_pdt {
+  margin-top: 50px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: #eee;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.page-list .list_pdt .list_item {
+  position: relative;
+  margin-top: 30px;
+}
+
+.page-list .list_pdt .list_item a {
+  display: flex;
+}
+
+.page-list .list_pdt .list_item:first-child {
+  margin-top: 0;
+}
+
+.page-list .list_pdt .img_wrap {
+  width: 80px;
+  height: 120px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.page-list .list_pdt img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.page-list .list_pdt .text_wrap {
+  width: calc(100% - 130px);
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-list .list_pdt .text_area strong{
+  display:block;
+  text-align:right;
+}
+.page-list .list_pdt .list_item{
+  padding-bottom:10px;
+  border-bottom:1px solid #555;
+}

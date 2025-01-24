@@ -1,0 +1,53 @@
+.page-signup{
+  background: #faf9f9;
+
+  .inner{
+    width: 500px;
+  }
+
+  .title{
+    &_xlarge{
+      font-size: 28px;
+
+    }
+  }
+  .text{
+
+    &_field{
+      &_area{
+        margin-top: 40px;
+        padding: 25px 20px;
+        border-radius: 4px;
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .list{
+    &_item{
+      display: flex;
+
+      .input{
+
+        &_box{
+          width: calc(100% - 90px);
+        }
+      }
+      .btn{
+        width: 80px;
+        height: 40px;
+        margin-top: 0;
+        margin-left: 10px;
+      }
+
+      &:not(:nth-of-type(1)){
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .guide_box{
+    margin-top: 20px;
+  }
+}

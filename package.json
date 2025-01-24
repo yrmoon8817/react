@@ -1,0 +1,18 @@
+{
+  "name": "react-projects",
+  "version": "1.0.0",
+  "description": "배포패키지",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy1": "cd rockpaperscissor_game && npm run build && cd ../ && git add . && git commit -m  \"rockpaperscissor_game 업데이트\" && git push && git checkout -f main && git checkout develop -- rockpaperscissor_game/build && git add . && git commit -m \"rockpaperscissor_game 업데이트\" && git push",
+    "deploy2": "cd shopping-site && npm run build && cd ../ && git add . && git commit -m  \"shopping-site 업데이트\" && git push && git checkout -f main && git checkout develop -- shopping-site/build && git add . && git commit -m \"shopping-site 업데이트\" && git push",
+    "deploy3": "cd weather-app && npm run build && cd ../ && git add . && git commit -m  \"weather-app 업데이트\" && git push && git checkout -f main && git checkout develop -- weather-app/build && git add . && git commit -m \"weather-app 업데이트\" && git push",
+    "deploy4": "cd todo && npm run build && cd ../ && git add . && git commit -m  \"todo 업데이트\" && git push && git checkout -f main && git checkout develop -- todo/dist && git add . && git commit -m \"todo 업데이트\" && git push"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.9b59e4d1.css",
-    "main.js": "./static/js/main.69e0f1ec.js",
-    "static/js/787.42650831.chunk.js": "./static/js/787.42650831.chunk.js",
-    "static/media/Snow.jpg": "./static/media/Snow.6d7ba11b1bfd43144820.jpg",
-    "static/media/Fog.jpg": "./static/media/Fog.9588aef9c97cde141d25.jpg",
-    "static/media/Rain.jpg": "./static/media/Rain.dea991fcc0a7802fb43f.jpg",
-    "static/media/Squall.jpg": "./static/media/Squall.e63b89324106669618ac.jpg",
-    "static/media/Dust.jpg": "./static/media/Dust.88ac9a5f264b56184007.jpg",
-    "static/media/Clouds.jpg": "./static/media/Clouds.ec92a024b5226190f24a.jpg",
-    "static/media/Clear.jpg": "./static/media/Clear.64e53fc837e55a0e830a.jpg",
-    "index.html": "./index.html",
-    "main.9b59e4d1.css.map": "./static/css/main.9b59e4d1.css.map",
-    "main.69e0f1ec.js.map": "./static/js/main.69e0f1ec.js.map",
-    "787.42650831.chunk.js.map": "./static/js/787.42650831.chunk.js.map"
+    "main.css": "/react/weather-app/build/static/css/main.1dcfb03c.css",
+    "main.js": "/react/weather-app/build/static/js/main.f1959f3c.js",
+    "static/js/787.42650831.chunk.js": "/react/weather-app/build/static/js/787.42650831.chunk.js",
+    "static/media/Snow.jpg": "/react/weather-app/build/static/media/Snow.6d7ba11b1bfd43144820.jpg",
+    "static/media/Fog.jpg": "/react/weather-app/build/static/media/Fog.9588aef9c97cde141d25.jpg",
+    "static/media/Rain.jpg": "/react/weather-app/build/static/media/Rain.dea991fcc0a7802fb43f.jpg",
+    "static/media/Squall.jpg": "/react/weather-app/build/static/media/Squall.e63b89324106669618ac.jpg",
+    "static/media/Dust.jpg": "/react/weather-app/build/static/media/Dust.88ac9a5f264b56184007.jpg",
+    "static/media/Clouds.jpg": "/react/weather-app/build/static/media/Clouds.ec92a024b5226190f24a.jpg",
+    "static/media/Clear.jpg": "/react/weather-app/build/static/media/Clear.64e53fc837e55a0e830a.jpg",
+    "index.html": "/react/weather-app/build/index.html",
+    "main.1dcfb03c.css.map": "/react/weather-app/build/static/css/main.1dcfb03c.css.map",
+    "main.f1959f3c.js.map": "/react/weather-app/build/static/js/main.f1959f3c.js.map",
+    "787.42650831.chunk.js.map": "/react/weather-app/build/static/js/787.42650831.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b59e4d1.css",
-    "static/js/main.69e0f1ec.js"
+    "static/css/main.1dcfb03c.css",
+    "static/js/main.f1959f3c.js"
   ]
 }

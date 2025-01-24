@@ -1,0 +1,149 @@
+.ic{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+  width:30px;
+  height:30px;
+
+  &_user {
+    margin-right:8px;
+  }
+
+  &_badge {
+    color: red;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-shadow: 0 0 1px #2d2d2d;
+  }
+
+  &_clear{
+    &::after{
+      cursor:default;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translate(-50%, -50%);
+      background-image: url(../../../img/ic_close_16px.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      opacity:0;
+      pointer-events: none;
+      user-select: none;
+      content: '';
+    }
+  }
+
+  &_view{
+    &::after{
+      cursor: pointer;
+      content:'';
+      position: absolute;
+      left:50%;
+      top: 50%;
+      width:16px;
+      height:16px;
+      transform: translate(-50%, -50%);
+      background-image: url(../../../img/ic_view.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  &_hidden{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    width:30px;
+    height:30px;
+
+    &::after{
+      cursor: pointer;
+      content:'';
+      position: absolute;
+      left:50%;
+      top: 50%;
+      width:16px;
+      height:16px;
+      transform: translate(-50%, -50%);
+      background-image: url(../../../img/ic_hidden.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  &_heart{
+      position:absolute;
+      top:auto;
+      bottom:0;
+      transform: translateY(0);
+      width:40px;
+      height:40px;
+      cursor: pointer;
+
+    &_filled{
+      position:absolute;
+      top:auto;
+      bottom:0;
+      transform: translateY(0);
+      width:40px;
+      height:40px;
+      cursor: pointer;
+
+      &::before{
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-image: url(../../../img/ic_heart_filled.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+
+    &::before{
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url(../../../img/ic_heart_24px.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+  &.ic{
+    &_arrow{
+      position:static;
+      margin-right:10px;
+      display:block;
+      width: 16px;
+      transform: translate(0,0);
+      height: 16px;
+      background-image: url(../../../img/ic_arrow_forward_20px.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      cursor:pointer;
+    }
+  }
+
+}
+
+.input_box.input_value {
+  .ic{
+    &_clear::after{
+      opacity:1;
+      pointer-events:all;
+      user-select:auto;
+      cursor: pointer;
+    }
+  }
+}

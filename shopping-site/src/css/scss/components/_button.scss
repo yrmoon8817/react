@@ -1,0 +1,113 @@
+.btn {
+  cursor: pointer;
+  border: 0;
+  height: 48px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.2s;
+  background-color: skyblue;
+  color: #2d2d2d;
+
+  &.btn{
+    &_full{
+      width: 100%;
+    }
+
+    &_search{
+      margin-top:0 !important;
+      position:absolute;
+      right:-40px;
+      top:calc(100% - 23px);
+      width:40px;
+      height:23px;
+      font-size:12px;
+    }
+  }
+
+  &.is_active{
+    background-color: #f58d8d;
+    color: #fff;
+  }
+
+  &:disabled{
+    background-color: #ddd;
+    color: #777;
+    cursor: default;
+    &:hover{
+      background-color: #ddd;
+      color: #777;
+    }
+  }
+
+  &:nth-of-type(1){
+    margin-top: 30px;
+  }
+
+  &_icon{
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+
+    &.btn{
+      &_delete{
+        right: -10px;
+        top: -10px;
+        width: 40px;
+        height: 40px;
+
+        &::after{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 15px;
+          height: 15px;
+          background: url(../../../img/delete.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+
+  &_group{
+    margin-top: 30px;
+    display:flex;
+    justify-content:start;
+    &.btn{
+      &_half{
+        justify-content:space-between;
+        margin-top:40px;
+
+        .btn{
+          width:calc(50% - 6px);
+          margin-top:0;
+
+          +.btn{
+            margin-top:0;
+          }
+
+        }
+      }
+    }
+
+    .btn{
+      &_option{
+        &:not(:nth-of-type(1)){
+          margin-left: 10px;
+        }
+      }
+
+    }
+  }
+
+  &:hover{
+    background-color: #2d2d2d;
+    color: #fff;
+  }
+}

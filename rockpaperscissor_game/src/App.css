@@ -1,0 +1,55 @@
+.wrap{display: flex;justify-content: center;align-items: center;width: 100%;height: 100vh;background-color: #d4c9c9;flex-direction: column;}
+
+.game_board{margin-top: 80px;width: 100%;display: flex;justify-content: center;align-items: center;}
+.game_box.is_Tie{border-color: #2d2d2d;color: #2d2d2d;}
+.game_box.is_Lose{border-color: red;color: red;}
+.game_box.is_Win{border-color: green;color: green;}
+.game_box.is_Lose .game_result{animation: loseFont 0.3s ease-in-out forwards;}
+.game_box.is_Win .game_result{animation: winFont 0.3s ease-in-out forwards;}
+.game_box.is_Win img{animation: winImg 0.3s ease-in-out forwards;}
+.game_box.is_Lose img{animation: loseImg 0.3s ease-in-out forwards;}
+.game_box{padding: 20px 0;border: 3px solid #ddd;box-sizing: border-box;width: 300px;height: 300px;background-color: #fff;display: flex;justify-content:space-between;align-items:center;flex-direction: column;}
+.game_box:not(:nth-of-type(1)){margin-left: 30px;}
+img{display: inline-block;transition: 0.3s;}
+.game_user, .game_result{display: block;width: 100%;height: 40px;line-height: 40px;font-size: 22px;transition: 0.2s;text-align: center;}
+.button_group{margin-top: 30px;}
+.btn_play{position:relative;width: 50px;background-color:#f6d2d2;border: 0;height: 35px;cursor: pointer;border: 1px solid #000;}
+.btn_play:not(:nth-of-type(1)){margin-left: 10px;}
+.btn_scissors::after{background: url('./images/scissors.svg') no-repeat; background-size: 100%;height:23px;}
+.btn_rock::after{background: url('./images/rock.svg') no-repeat; background-size: 100%;height:20px;}
+.btn_papers::after{background: url('./images/papers.svg') no-repeat; height:20px;}
+.btn_play::after{content:'';position: absolute;display: inline-block;left: 50%;top: 50%;transform: translate(-50%,-50%); width: 20px; background-size: 100%;}
+
+
+@keyframes winImg {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.5);
+  }
+}
+@keyframes loseImg {
+  0% {
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.7);
+  }
+}
+@keyframes winFont {
+  0%{
+    font-size:22px;
+  }
+  100%{
+    font-size:30px;
+  }
+}
+@keyframes loseFont {
+  0% {
+    font-size: 22px;
+  }
+  100%{
+    font-size:12px;
+  }
+}

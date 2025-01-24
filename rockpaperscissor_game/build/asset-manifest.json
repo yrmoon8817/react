@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.496b7221.css",
-    "main.js": "./static/js/main.255e3661.js",
-    "static/js/787.4239a9e9.chunk.js": "./static/js/787.4239a9e9.chunk.js",
-    "static/media/rock.svg": "./static/media/rock.34593e00048a017bfcdbc613e0b7b996.svg",
-    "static/media/scissors.svg": "./static/media/scissors.9abfcc878ade58cdf8131b4e1f2c3f41.svg",
-    "index.html": "./index.html",
-    "static/media/papers.svg": "./static/media/papers.465abccf0dda6de077ccb862552e6f1f.svg",
-    "main.496b7221.css.map": "./static/css/main.496b7221.css.map",
-    "main.255e3661.js.map": "./static/js/main.255e3661.js.map",
-    "787.4239a9e9.chunk.js.map": "./static/js/787.4239a9e9.chunk.js.map"
+    "main.css": "/react/rockpaperscissor_game/build/static/css/main.42ec7597.css",
+    "main.js": "/react/rockpaperscissor_game/build/static/js/main.df31cf30.js",
+    "static/js/787.4239a9e9.chunk.js": "/react/rockpaperscissor_game/build/static/js/787.4239a9e9.chunk.js",
+    "static/media/rock.svg": "/react/rockpaperscissor_game/build/static/media/rock.34593e00048a017bfcdbc613e0b7b996.svg",
+    "static/media/scissors.svg": "/react/rockpaperscissor_game/build/static/media/scissors.9abfcc878ade58cdf8131b4e1f2c3f41.svg",
+    "index.html": "/react/rockpaperscissor_game/build/index.html",
+    "static/media/papers.svg": "/react/rockpaperscissor_game/build/static/media/papers.465abccf0dda6de077ccb862552e6f1f.svg",
+    "main.42ec7597.css.map": "/react/rockpaperscissor_game/build/static/css/main.42ec7597.css.map",
+    "main.df31cf30.js.map": "/react/rockpaperscissor_game/build/static/js/main.df31cf30.js.map",
+    "787.4239a9e9.chunk.js.map": "/react/rockpaperscissor_game/build/static/js/787.4239a9e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.496b7221.css",
-    "static/js/main.255e3661.js"
+    "static/css/main.42ec7597.css",
+    "static/js/main.df31cf30.js"
   ]
 }
