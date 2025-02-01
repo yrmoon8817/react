@@ -1,0 +1,76 @@
+.list {
+  .list-item {
+    & + .list-item {
+      margin-top:10px;
+      border-top:1px solid #ddd;
+    }
+  }
+}
+
+.diary-item-box {
+  width:100%;
+  display:flex;
+
+  .thumbnail {
+    overflow:hidden;
+    padding:10px;
+    position:relative;
+    width:90px;
+    height:70px;
+    box-sizing:border-box;
+    border-radius:4px;
+    border:1px solid #efefef;
+    background-color:#efefef;
+
+    img{
+      position:absolute;
+      left:10px;
+      top:10px;
+      bottom:10px;
+      right:10px;
+      width:calc(100% - 20px);
+      height:calc(100% - 20px);
+      object-fit:contain;
+    }
+    &.thumbnail-1 {
+      background-color:rgb(100, 201, 100);
+    }
+    &.thumbnail-2 {
+      background-color:rgb(157, 214, 114);
+    }
+    &.thumbnail-3 {
+      background-color:rgb(253,206,23);
+    }
+    &.thumbnail-4 {
+      background-color:rgb(253,132,70);
+    }
+    &.thumbnail-5 {
+      background-color:rgb(253,86,95);
+    }
+  }
+  .info-box {
+    width:100%;
+    display:flex;
+    align-items:center;
+
+    .info-title {
+      font-weight:bold;
+      color:#2d2d2d;
+      font-size:18px;
+      line-height:24px;
+      margin-left:10px;
+      margin-right:auto;
+    }
+    .date {
+      font-size:16px;
+      font-weight:bold;
+      color:#555;
+      display:inline-block;
+      margin-left:10px;
+    }
+    .btn-box {
+      margin-left:10px;
+      width:auto;
+    }
+  }
+}

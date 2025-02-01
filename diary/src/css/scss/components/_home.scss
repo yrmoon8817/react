@@ -1,0 +1,36 @@
+.home {
+  .util-box {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:20px;
+    border-bottom:1px solid #dddddd;
+  }
+  .option-box {
+    width:200px;
+
+    select {
+      width:100%;
+      border:0;
+      background-color:#ddd;
+      padding:5px 10px;
+      border-radius:4px;
+      font-size:18px;
+    }
+  }
+  .btn-box {
+    width:100%;
+    margin-left:20px;
+  }
+  .btn-new {
+    width:100%;
+    font-size: 18px;
+    padding:6px 10px;
+  }
+  .list {
+
+  }
+  .list-item {
+    padding:12px 0;
+  }
+}

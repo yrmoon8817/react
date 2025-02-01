@@ -1,0 +1,34 @@
+.btn {
+  padding:5px 10px;
+  border-radius:6px;
+  color:#2d2d2d;
+  box-sizing:border-box;
+
+  &.btn-outline {
+    border:1px solid #ddd;
+    background-color:transparent;
+  }
+  &.btn-fill-yellow {
+    background-color:rgb(236, 236, 159);
+  }
+  &.btn-fill-red {
+    color:#fafafa;
+    background-color:rgb(182, 45, 45);
+  }
+  &.btn-fill-blue {
+    color: #fafafa;
+    background-color:rgb(21, 60, 167);
+  }
+  &.btn-fill-green {
+    color: #fafafa;
+    background-color:rgb(64, 180, 64);
+  }
+  &.btn-fill-yellow {
+    color: #fafafa;
+    background-color:coral;
+  }
+  &.btn-fill-black {
+    color: #fafafa;
+    background-color:black;
+  }
+}
