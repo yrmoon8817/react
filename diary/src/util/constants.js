@@ -1,0 +1,22 @@
+export const emotionList = [
+  {
+    emotionID:1,
+    emotionName:"행복🍀"
+  },
+  {
+    emotionID:2,
+    emotionName:"좋아~"
+  },
+  {
+    emotionID:3,
+    emotionName:"SoSo.."
+  },
+  {
+    emotionID:4,
+    emotionName:"짜증"
+  },
+  {
+    emotionID:5,
+    emotionName:"끔찍"
+  }
+];

@@ -101,8 +101,9 @@ function App() {
       type:"DELETE",
       data:{id}
     });
-
   }
+  useEffect(()=>{
+  },[data])
   return (
     <div className='app'>
       <DiaryStateContext.Provider value={monthlyData}>
