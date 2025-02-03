@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import New from './pages/New';
 import Diary from './pages/Diary';
 import NotFound from './pages/NotFound';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import Edit from './pages/Edit';
 
 
@@ -89,7 +89,6 @@ function App() {
       data:parsedData
     });
     setIsLoading(false);
-    return <Navigate to="/"/>;
   },[])
   // 새로운 일기 추가
   const onCreate = (createdDate, emotionID, content) =>{
