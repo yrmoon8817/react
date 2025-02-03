@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import New from './pages/New';
 import Diary from './pages/Diary';
 import NotFound from './pages/NotFound';
-import {Route, Routes } from 'react-router-dom';
+import {Navigate, Route, Routes } from 'react-router-dom';
 import Edit from './pages/Edit';
 
 
@@ -140,7 +140,7 @@ function App() {
             <Route path="/new" element={<New/>} />
             <Route path="/diary/:id" element={<Diary/>} />
             <Route path="/edit/:id" element={<Edit/>} />
-            <Route path="*" element={<NotFound/>} />
+            <Route path="*" element={<Navigate to={"/"}/>} />
           </Routes>
         </DiaryDispatchContext.Provider>
       </DiaryStateContext.Provider>
