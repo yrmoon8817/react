@@ -5,40 +5,39 @@ import New from './pages/New';
 import Diary from './pages/Diary';
 import NotFound from './pages/NotFound';
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
 import Edit from './pages/Edit';
 
-const mockData = [
-  {
-    id:1,
-    createdDate: new Date("2025-02-01").getTime(),
-    emotionID:1,
-    content:"1번 일기내용"
-  },
-  {
-    id:2,
-    createdDate: new Date("2025-01-25").getTime(),
-    emotionID:2,
-    content:"2번 일기내용"
-  },
-  {
-    id:3,
-    createdDate: new Date("2025-02-13").getTime(),
-    emotionID:3,
-    content:"3번 일기내용"
-  },
-]
+
 function reducer (state, action){
+  let nextState;
+
   switch(action.type){
-    case 'CREATE': return [action.data, ...state];
-    case 'EDIT': return state.map((item)=>String(item.id)===String(action.data.id)?action.data:item);
-    case 'DELETE': return state.filter((item)=>String(item.id)!==String(action.data.id));
-    default: return state;
+    case 'INIT':{
+      return action.data;
+    }
+    case 'CREATE': {
+      nextState=[action.data, ...state];
+      break;
+    } 
+    case 'EDIT': 
+    {
+      nextState=state.map((item)=>String(item.id)===String(action.data.id)?action.data:item);
+      break;
+    }
+    case 'DELETE': {
+      nextState = state.filter((item)=>String(item.id)!==String(action.data.id));
+      break;
+    }
+    default: {
+      nextState=state;
+    } 
   }
+  localStorage.setItem("diary", JSON.stringify(nextState));
+  return nextState;
 }
 export const DiaryStateContext = createContext();
 export const DiaryDispatchContext = createContext();
-const getMonthlyDate = (pivotDate, data) =>{
+export const getMonthlyDate = (pivotDate, data) =>{
   const beginTime = new Date(
     pivotDate.getFullYear(),
     pivotDate.getMonth(),
@@ -61,22 +60,43 @@ const getMonthlyDate = (pivotDate, data) =>{
 // 2. "/new" : 새로운 일기를 작성하는 New 페이지
 // 3. "/diary" : 일기를 상세하게 조회하는 Diary 페이지
 function App() {
-  const [data, dispatch] = useReducer(reducer,mockData);
-  const isRef = useRef(3);
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, dispatch] = useReducer(reducer,[]);
+  const idRef = useRef(0);
   const [pivotDate, setPivotDate] = useState(new Date());
   const monthlyData = getMonthlyDate(pivotDate, data);
-  const onIncreaseMonth=()=>{
-    setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth()+1));
-  }
-  const onDecreaseMonth=()=>{
-    setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth()-1));
-  }
+
+  useEffect(()=>{
+    const storedData = localStorage.getItem("diary");
+    if(!storedData) {
+      setIsLoading(false);
+      return;
+    }
+    const parsedData = JSON.parse(storedData);
+    if(!Array.isArray(parsedData)){
+      setIsLoading(false);
+      return
+    }
+    let maxId = 0;
+    parsedData.forEach((item)=>{
+      if(Number(item.id)>maxId){
+        maxId = Number(item.id);
+      }
+    })
+    idRef.current = maxId+1
+    dispatch({
+      type:"INIT",
+      data:parsedData
+    });
+    setIsLoading(false);
+
+  },[])
   // 새로운 일기 추가
   const onCreate = (createdDate, emotionID, content) =>{
     dispatch({
       type:"CREATE",
       data:{
-        id:isRef.current++,
+        id:idRef.current++,
         createdDate,
         emotionID,
         content,
@@ -102,19 +122,25 @@ function App() {
       data:{id}
     });
   }
-  useEffect(()=>{
-  },[data])
+  const onIncreaseMonth=()=>{
+    setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth()+1));
+  }
+  const onDecreaseMonth=()=>{
+    setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth()-1));
+  }
+  if(isLoading){
+    return <div>데이터 로딩 중입니다~~</div>
+  }
   return (
     <div className='app'>
       <DiaryStateContext.Provider value={monthlyData}>
         <DiaryDispatchContext.Provider value={{onCreate, onDelete, onUpdate}}>
-          <Header 
-            title={`${pivotDate.getFullYear()}년 ${pivotDate.getMonth()+1}월`} 
-            previousButton = {onDecreaseMonth}
-            nextButton = {onIncreaseMonth}
-          />
           <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<Home 
+              onIncreaseMonth={onIncreaseMonth}
+              onDecreaseMonth={onDecreaseMonth}
+              pivotDate={pivotDate}
+            />} />
             <Route path="/new" element={<New/>} />
             <Route path="/diary/:id" element={<Diary/>} />
             <Route path="/edit/:id" element={<Edit/>} />

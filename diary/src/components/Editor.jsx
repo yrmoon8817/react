@@ -2,20 +2,8 @@ import React, { useEffect, useState } from 'react';
 import EmotionItem from './EmotionItem';
 import { useNavigate } from 'react-router-dom';
 import { emotionList } from '../util/constants';
+import { getStringedDate } from '../util/getStringedDate';
 
-const getStringedDate =(targetDate)=>{
-  // 날짜 -> YYYY-MM-DD
-  let year = targetDate.getFullYear();
-  let month = targetDate.getMonth() + 1;
-  let date = targetDate.getDate();
-  if(month < 10){
-    month = `0${month}`;
-  }
-  if(date<10){
-    date=`0${date}`;
-  }
-  return `${year}-${month}-${date}`
-}
 export default function Editor({onSubmit, initData}) {
   const [input, setInput] = useState({
     createdDate: new Date(),
