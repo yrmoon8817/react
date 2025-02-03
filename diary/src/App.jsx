@@ -137,12 +137,7 @@ function App() {
         <DiaryDispatchContext.Provider value={{onCreate, onDelete, onUpdate}}>
           <Routes>
             <Route path="/" 
-                element={<Home 
-                onIncreaseMonth={onIncreaseMonth}
-                onDecreaseMonth={onDecreaseMonth}
-                pivotDate={pivotDate}
-              />} 
-            />
+                element={<Home onIncreaseMonth={onIncreaseMonth} onDecreaseMonth={onDecreaseMonth}pivotDate={pivotDate} />} />
             <Route path="/new" element={<New/>} />
             <Route path="/diary/:id" element={<Diary/>} />
             <Route path="/edit/:id" element={<Edit/>} />

@@ -27,5 +27,6 @@
     "globals": "^15.14.0",
     "sass": "1.77",
     "vite": "^6.0.5"
-  }
+  },
+  "homepage": "https://yrmoon8817.github.io/react/diary/dist"
 }
